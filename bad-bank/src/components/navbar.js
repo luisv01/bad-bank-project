@@ -9,7 +9,7 @@ import { Tooltip } from 'react-tooltip';
 function NavBar() {
   const location = useLocation();
   return (
-    <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
+    <Navbar className='fs-5 text' collapseOnSelect expand="lg" bg="light" variant="light">
       <Tooltip id="home" />
       <Link
         data-tooltip-id="home"
@@ -25,7 +25,7 @@ function NavBar() {
       </Link>
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
-        <Nav className="me-auto">
+        <Nav className="me-auto justify-content-end flex-grow-1 pe-3">
           <Tooltip id="createaccount" />
           <Link
             data-tooltip-id="createaccount"
@@ -41,7 +41,7 @@ function NavBar() {
           </Link>
           {/* <Nav.Link href="#/createaccount/">Create Account</Nav.Link> */}
           <Tooltip id="login" />
-          <Link
+          {/* <Link
             data-tooltip-id="login"
             data-tooltip-content="Are you sure you want to login?"
             className={
@@ -52,7 +52,7 @@ function NavBar() {
             to="/login/"
           >
             Login
-          </Link>
+          </Link> */}
           <Tooltip id="deposit" />
           <Link
             data-tooltip-id="deposit"

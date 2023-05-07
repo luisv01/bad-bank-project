@@ -6,13 +6,16 @@ export function Card(props) {
   function classes() {
     const bg = props.bgcolor ? ' bg-' + props.bgcolor : ' ';
     const txt = props.txtcolor ? ' text-' + props.txtcolor : ' text-white';
-    return 'card mb-6 ' + bg + txt;
+    return 'card mb-3' + bg + txt;
   }
-
+function cardStyle() {
+  const style = props.style ? props.style : '48rem'
+  return style
+}
   return (
-    <div className={classes()} style={{ maxWidth: '18rem' }}>
-      <div className="card-header">{props.header}</div>
-      <div className="card-body">
+    <div className={classes()} style={{ maxWidth: cardStyle() }}>
+      <div className="card-header text-center fs-1 text">{props.header}</div>
+      <div className="card-body text-center fs-4 text">
         {props.title && <h5 className="card-title">{props.title}</h5>}
         {props.text && <p className="card-text">{props.text}</p>}
         {props.body}

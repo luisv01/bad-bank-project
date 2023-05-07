@@ -6,7 +6,7 @@ function Home() {
   return (
     <Card
       txtcolor="black"
-      header="BadBank Landing Module"
+      header="BadBank Landing Home Page"
       title="Welcome to the bank"
       text="You can move around using the navigation bar."
       body={<img src={bankImage} className="img-fluid" alt="Bank image" />}
